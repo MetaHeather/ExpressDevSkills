@@ -10,7 +10,8 @@ const skills = [
 //what to export
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    deleteOne
 };
 
 //function to return all skills
@@ -21,3 +22,7 @@ function getAll() {
 function getOne(id) {
     return skills[id];
 }
+
+function deleteOne(id){
+    skills.splice(id, 1);
+  }
