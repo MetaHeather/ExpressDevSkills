@@ -5,7 +5,8 @@ var Skills = require('../models/skill');
 
 //export object
 module.exports = {
-    index
+    index,
+    show
 }
 
 
@@ -14,4 +15,11 @@ function index(req, res) {
     res.render('skills/index', {
       skills: Skills.getAll()
     });
+  }
+
+  //function to delete skill
+  function show(req,res) {
+      res.render('skills/show', {
+        
+      });
   }

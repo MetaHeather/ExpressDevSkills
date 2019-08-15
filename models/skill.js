@@ -9,10 +9,15 @@ const skills = [
 
 //what to export
 module.exports = {
-    getAll
+    getAll,
+    getOne
 };
 
 //function to return all skills
 function getAll() {
     return skills;
+}
+
+function getOne(id) {
+    return skills[id];
 }
