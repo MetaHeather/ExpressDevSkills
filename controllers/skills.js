@@ -7,7 +7,9 @@ var Skills = require('../models/skill');
 module.exports = {
     index,
     show,
-    deleteSkill
+    deleteSkill,
+    create,
+    newSkill
 }
 
 
@@ -29,4 +31,15 @@ function index(req, res) {
   function deleteSkill(req, res){
     Skills.deleteOne(req.params.id);
     res.redirect('/skills');
+  }
+
+  //Adds a skill to skill array in model
+  function create(req, res){
+    Skills.addOne(req.body);
+    res.redirect('/skills');
+  };
+
+  //Renders index with new skill added
+  function newSkill(req, res){
+    res.render('skills/new');
   }

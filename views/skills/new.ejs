@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>Developer Skills</title>
+</head>
+<body>
+    <h1>Add a Skill</h1>
+  <!-- action refers to the path, methos will be either get or post -->
+  <form action="/skills" method="POST" autocomplete="off">
+    <!-- whatever name we give each input will be the name of the rq.body controller so rq.body.todo -->
+      <input type="text" name="skill">
+      <button type="submit">Add Skill</button>
+  </form>
+</body>
+</html>
